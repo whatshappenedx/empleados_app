@@ -2,13 +2,12 @@
 
 
 **Requisitos**  
-- **PHP:** 8.1+ con extensión PDO MySQL
-- **Node.js:** 18+ y npm
-- **MySQL/MariaDB:** 10.4+ (o MySQL 5.7+/8)
-- Opcional: Postman para probar la API
+- **PHP** 8.1+
+- **Node.js** 18+
+- **MySQL/MariaDB** 10.4+
+
 
 **Configuración Rápida**
-- **Clonar repositorio:** `git clone ... && cd pruebaTec`
 - **Configurar DB:** editar `backend/src/config.php:6` con host, puerto, nombre, usuario y contraseña.
 - **Crear BD y tablas:**
   - Crear base: `CREATE DATABASE empresa_db CHARACTER SET utf8mb4;` (o el nombre que definas)
@@ -19,21 +18,18 @@
 - Servidor embebido:
   - `php -S localhost:8000 -t backend/public`
   - Verifica: `curl http://localhost:8000/` debe responder con `API empleados OK`.
-- Servidor web (opcional): apunta el docroot a `backend/public`.
 
 **Levantar Frontend (Angular)**
 - `cd frontend/angular`
 - `npm install`
 - `npm start` (abre en `http://localhost:4200`)
-- El frontend llama por defecto a `http://localhost:8000` y usa un token por defecto. Puedes sobreescribirlo inyectando variables globales en `src/index.html`:
-  - `<script>window.API_BASE_URL='http://localhost:8000';window.API_TOKEN='TU_TOKEN';</script>`
+- El frontend llama por defecto a `http://localhost:8000` y usa un token por defecto.
 
 **Probar con Postman**
 - Importa `postman/empleados_api.postman_collection.json`.
 - Variables de la colección:
   - `baseUrl`: `http://localhost:8000`
   - `apiToken`: el valor de `API_TOKEN` en `backend/src/config.php`
-- Endpoints incluidos (ver detalles abajo) con ejemplos de body y headers.
 
 **Endpoints**
 - Empleados
