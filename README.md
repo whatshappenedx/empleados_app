@@ -95,11 +95,11 @@
 
 ## Vista previa
 
-![Captura 1 — Angular](docs/screenshots/img_1.png)
-![Captura 2 — Angular](docs/screenshots/img_2.png)
-![Captura 3 — Angular](docs/screenshots/img_3.png)
-![Captura 4 - Angular](docs/screenshots/img_4.png)
-![Captura 5 - Angular](docs/screenshots/img_5.png)
-![Captura 6 - Postman](docs/screenshots/img_6.png)
-![Captura 7 - Postman](docs/screenshots/img_7.png)
-![Captura 8 - PHP](docs/screenshots/img_8.png)
+![Captura 1 — Angular](screenshots/img_1.png)
+![Captura 2 — Angular](screenshots/img_2.png)
+![Captura 3 — Angular](screenshots/img_3.png)
+![Captura 4 - Angular](screenshots/img_4.png)
+![Captura 5 - Angular](screenshots/img_5.png)
+![Captura 6 - Postman](screenshots/img_6.png)
+![Captura 7 - Postman](screenshots/img_7.png)
+![Captura 8 - PHP](screenshots/img_8.png)
