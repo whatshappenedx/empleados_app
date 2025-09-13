@@ -1,0 +1,99 @@
+{
+  "info": {
+    "name": "API Empleados",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar empleados",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/empleados?page=1&limit=10",
+          "host": ["{{baseUrl}}"],
+          "path": ["api","empleados"],
+          "query": [{"key":"page","value":"1"},{"key":"limit","value":"10"}]
+        }
+      }
+    },
+    {
+      "name": "Ver empleado por ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/empleados/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api","empleados","1"]
+        }
+      }
+    },
+    {
+      "name": "Crear empleado",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key":"Content-Type","value":"application/json"},
+          {"key":"Authorization","value":"Bearer {{apiToken}}"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Nuevo Empleado\",\n  \"correo\": \"nuevo@example.com\",\n  \"cargo\": \"QA\",\n  \"fecha_ingreso\": \"2024-01-10\"\n}"
+        },
+        "url": {"raw": "{{baseUrl}}/api/empleados","host":["{{baseUrl}}"],"path":["api","empleados"]}
+      }
+    },
+    {
+      "name": "Actualizar empleado",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {"key":"Content-Type","value":"application/json"},
+          {"key":"Authorization","value":"Bearer {{apiToken}}"}
+        ],
+        "body": {"mode":"raw","raw":"{\n  \"nombre\": \"Ana Pérez\",\n  \"correo\": \"ana.perez@example.com\",\n  \"cargo\": \"Senior Dev\",\n  \"fecha_ingreso\": \"2023-05-01\"\n}"},
+        "url": {"raw":"{{baseUrl}}/api/empleados/1","host":["{{baseUrl}}"],"path":["api","empleados","1"]}
+      }
+    },
+    {
+      "name": "Eliminar empleado",
+      "request": {
+        "method": "DELETE",
+        "header": [{"key":"Authorization","value":"Bearer {{apiToken}}"}],
+        "url": {"raw":"{{baseUrl}}/api/empleados/1","host":["{{baseUrl}}"],"path":["api","empleados","1"]}
+      }
+    },
+    {
+      "name": "Familiares por empleado",
+      "request": {
+        "method": "GET",
+        "url": {"raw":"{{baseUrl}}/api/empleados/1/familiares","host":["{{baseUrl}}"],"path":["api","empleados","1","familiares"]}
+      }
+    },
+    {
+      "name": "Agregar familiar",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key":"Content-Type","value":"application/json"},
+          {"key":"Authorization","value":"Bearer {{apiToken}}"}
+        ],
+        "body": {"mode":"raw","raw":"{\n  \"nombre_familiar\": \"Mario Pérez\",\n  \"parentesco\": \"Hermano\",\n  \"fecha_nacimiento\": \"1990-02-02\"\n}"},
+        "url": {"raw":"{{baseUrl}}/api/empleados/1/familiares","host":["{{baseUrl}}"],"path":["api","empleados","1","familiares"]}
+      }
+    },
+    {
+      "name": "Eliminar familiar",
+      "request": {
+        "method": "DELETE",
+        "header": [{"key":"Authorization","value":"Bearer {{apiToken}}"}],
+        "url": {"raw":"{{baseUrl}}/api/familiares/1","host":["{{baseUrl}}"],"path":["api","familiares","1"]}
+      }
+    }
+  ],
+  "variable": [
+    {"key": "baseUrl", "value": "http://localhost:8000"},
+    {"key": "apiToken", "value": "82d54dbbe7d234489893d4afd563f6fc4779f979dfba6a04b886dbfc721344c4"}
+  ]
+}
+

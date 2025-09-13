@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/angular.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "empleados-app": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/empleados-app",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [],
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [{"type":"initial","maximumWarning":"2MB","maximumError":"5MB"}],
+              "outputHashing": "all"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "empleados-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "empleados-app:build:production"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
