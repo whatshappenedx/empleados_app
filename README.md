@@ -101,5 +101,5 @@
 ![Captura 4 - Angular](docs/screenshots/img_4.png)
 ![Captura 5 - Angular](docs/screenshots/img_5.png)
 ![Captura 6 - Postman](docs/screenshots/img_6.png)
-![Captura 6 - Postman](docs/screenshots/img_7.png)
-![Captura 7 - PHP](docs/screenshots/img_8.png)
+![Captura 7 - Postman](docs/screenshots/img_7.png)
+![Captura 8 - PHP](docs/screenshots/img_8.png)
